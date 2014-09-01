@@ -23,6 +23,7 @@ class Card
     else
       @facing = :down
     end
+    self
   end
   
   def facing
@@ -50,7 +51,7 @@ class Card
   end
   
   def to_s
-    "#{@pip.capitalize} of #{@suit.capitalize}"
+    "#{@pip.to_s.capitalize} of #{@suit.to_s.capitalize}"
   end
   
 end
